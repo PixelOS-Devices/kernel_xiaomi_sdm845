@@ -24,6 +24,7 @@ msg() {
 
 # clone_tc - clones proton clang to TC_DIR
 clone_tc() {
+	msg "|| Cloning Proton Clang ||"
 	git clone --depth=1 https://github.com/kdrag0n/proton-clang.git $TC_DIR
 }
 
