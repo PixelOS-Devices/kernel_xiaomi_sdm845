@@ -12,8 +12,15 @@ KERNELNAME="perf+"
 KERNEL_DIR="$CURRENT_DIR"
 AK_REPO="https://github.com/sajidshahriar72543/AnyKernel3"
 AK_DIR="$HOME/AnyKernel3"
-TC_DIR="$HOME/proton-proton"
+TC_DIR="$HOME/pg-clang"
 # End Config
+
+# Status message function
+msg() {
+	echo
+	echo -e "\e[1;32m$*\e[0m"
+	echo
+}
 
 # clone_tc - clones proton clang to TC_DIR
 clone_tc() {
@@ -22,11 +29,15 @@ clone_tc() {
 
 # Clones anykernel
 clone_ak() {
+	msg "|| Cloning Anykernel ||"
 	git clone $AK_REPO $AK_DIR
 }
 # Actually do stuff
 clone_tc
 clone_ak
 
+msg "|| Setup Process Done ||"
+
+msg "|| Starting Build Process ||"
 # Run build script
 . ${CURRENT_DIR}/kernel_build.sh
