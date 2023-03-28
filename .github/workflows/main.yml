@@ -2,7 +2,7 @@ name: Github workflow kernel build
 
 on:
   push:
-    branches: [ thirteen, lineage-20 ]
+    branches: [ lineage-20-v2 ]
 
 env:
     BOT_API_KEY: ${{ secrets.BOT_API_KEY }}
