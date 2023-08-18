@@ -8,7 +8,7 @@
 
 # Config
 CURRENT_DIR="$(pwd)"
-KERNELNAME="perf+"
+KERNELNAME="Etude"
 KERNEL_DIR="$CURRENT_DIR"
 AK_REPO="https://github.com/sajidshahriar72543/AnyKernel3-1"
 AK_DIR="$HOME/AnyKernel3"
